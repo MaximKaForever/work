@@ -1,9 +1,9 @@
 .container {
   position: relative; 
-  width: 300px;
-  height: 600px;
+  width: 98vw;
+  height: 99vh;
   background-image: url('https://avatars.mds.yandex.net/i?id=27eaa942ef9e61554d4e4025dfb03580bae06e17-12497179-images-thumbs&n=13');
-  background-size: 300px 600px;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -11,27 +11,30 @@
 }
 .container img {
   position: absolute;
-  top: 120px;  
-  left: 0px;  
-  width: 300px; 
+  top: 15vh;  
+  left: 0vw;  
+  width: 3000px; 
   height: 8px; 
   border-radius: 6px; 
   z-index: 10;  
 }
 .toast {
   position: absolute;
-  top: 550px;  
-  left: 155px;  
+  top: 12vh;
+  left: 50vw;
   transform: translateX(-50%);
   background-color: #333;
   color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
+  font-size: 30px;
+  padding: 24px 40px;
+  border-radius: 20px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
   font-family: 'Arial', sans-serif;
   z-index: 1000;
+  min-width: 500px;
+  text-align: center;
 }
 
 .toast.show {
@@ -41,16 +44,16 @@
 
 .my-button {
   position: absolute;
-  bottom: 1265px;   
-  left: 8%;       
+  bottom: 95vh;   
+  left: 75vw;       
   font-family: 'Times New Roman', serif;
-  font-size: 12pt;
+  font-size: 35pt;
   font-weight: bold;
   background-color: #ff0404;
   color: white;
   border: none;
-  border-radius: 6px;
-  padding: 5px 5px;
+  border-radius: 35px;
+  padding: 7px 7px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 10;
