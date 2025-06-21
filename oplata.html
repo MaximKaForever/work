@@ -12,33 +12,30 @@
   <div class="Top-text">
     VPN
   </div>
+
+   <img class="Linia" src="https://avatars.mds.yandex.net/i?id=3ffbd8a4e47ce520ca8bd4d9e048c03601f35fc7-5155332-images-thumbs&n=13" alt="Фото">
   
   <div class="Bot-text">
     Мы не просим данные вашей карты <br>После оплаты вам вышлют ключ в личные сообщения
   </div>
 
-    <div class="Podskazka-text">
-    | Прокрутите вниз |                
-  </div>
+<div class="form-box">
+  <form id="clientForm" method="POST">
+    <label for="card">С какой карты оплатили, например "Сбербанк":</label>
+    <input type="text" id="card" name="карта_оплаты" required>
 
-  <img class="Linia" src="https://avatars.mds.yandex.net/i?id=3ffbd8a4e47ce520ca8bd4d9e048c03601f35fc7-5155332-images-thumbs&n=13" alt="Фото">
-
-  <!-- Вынесли форму сюда, она теперь прокручивается -->
-  <div class="form-box">
-    <label for="Obshie_Danie">Заполните данные:</label>
-    <input type="text" id="Dannie_Zakazchika" name="Dannie_Zakazchika" placeholder="Введите свой телеграм">
-    <input type="text" id="karta_klienta" name="karta_klienta" placeholder="Откуда оплачивали, например 'Сбербанк'">
-  </div>
-
-  <div class="footer">
-    <div> <button class="my-button">Профиль</button> </div>
-  </div> 
-  <button class="my-button_3">Оплатил</button>
+    <label for="info">Данные клиента: (почта/телеграм)</label>
+    <textarea id="info" name="данные_клиента" rows="4" required></textarea>
+    <button type="submit" class="my-button_3">Оплатил</button>
+  </form>
 </div>
 
+  <div class="footer">
+    <div><button class="my-button">Профиль</button></div>
+  </div>
 
-  <div id="toast" class="toast">Кнопка находится в разработке</div>
+<div id="toast" class="toast">Кнопка находится в разработке</div>
 
-  <script src="Script.js"></script>
+<script src="Script.js"></script>
 </body>
 </html>

@@ -1,40 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+}
+
 .container {
   position: relative;
-  width: 98vw;
-  height: 99vh;
+  width: 100%;
+  min-height: 120vh;
   background-image: url('https://avatars.mds.yandex.net/i?id=7db99af204ed2f90705938916d4f9491_l-5016167-images-thumbs&n=13');
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 35px;
+  border-radius: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
 
-}
 .Linia {
-  position: absolute;
-  top: 15vh;  
-  left: 0vw;  
-  width: 100%; 
-  height: 8px; 
-  border-radius: 6px; 
-  z-index: 10;  
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  background-color: white;
+  margin: 1rem 0;
 }
+
 .toast {
-  position: absolute;
-  top: 12vh;
-  left: 50vw;
+  position: fixed;
+  top: 10%;
+  left: 50%;
   transform: translateX(-50%);
   background-color: #333;
   color: white;
-  font-size: 30px;
-  padding: 24px 40px;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
   border-radius: 20px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
-  font-family: 'Arial', sans-serif;
   z-index: 1000;
-  min-width: 500px;
+  min-width: 60%;
   text-align: center;
 }
 
@@ -46,8 +59,8 @@
 .footer {
   position: fixed;
   bottom: 0;
-  width: 98%;
-  height: 95px;
+  width: 100%;
+  height: 130px;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
@@ -55,186 +68,140 @@
   z-index: 1000;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-}
-.my-button_2 {
-  position: absolute;
-  bottom: 70vh;   
-  left: 3vw;       
-  font-family: 'Arial', sans-serif;
-  font-size: 30pt;
-  font-weight: bold;
-  background-color: #ff0404;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 15px 90px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 10; 
 }
 
-.my-button_2:hover {
-  background-color: #006fa6;
-}
-
+.my-button,
+.my-button_2,
 .my-button_3 {
-  position: absolute;
-  bottom: -60vh;   
-  left: 15vw;       
   font-family: 'Arial', sans-serif;
-  font-size: 30pt;
+  font-size: 3rem;
   font-weight: bold;
   background-color: #ff0404;
   color: white;
   border: none;
-  border-radius: 30px;
-  padding: 15px 220px;
+  border-radius: 12px;
+  padding: 1rem 2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 10; 
 }
 
+.my-button:hover,
+.my-button_2:hover,
 .my-button_3:hover {
   background-color: #006fa6;
 }
 
 .my-button {
   position: fixed;
-  bottom: 1vh;   
-  left: 75vw;       
-  font-family: 'Arial', sans-serif;
-  font-size: 30pt;
-  font-weight: bold;
+  bottom: 1%;
+  right: 5%;
+  z-index: 10;
+}
+
+.my-button_2 {
+  font-size: 3rem;
+  padding: 1rem 2.5rem;
+  margin-top: 15rem;
   background-color: #ff0404;
   color: white;
   border: none;
-  border-radius: 35px;
-  padding: 7px 7px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 10; 
 }
 
-.my-button:hover {
-  background-color: #006fa6;
-}
-.Top-text {
-  position: relative;
-  top: 3vh;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: white;
-  padding: 20px 30px;
-  border-radius: 15px;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  max-width: 6000px;
-  width: 90%;       
-  box-sizing: border-box;
-}
-.Cena-text {
-  position: relative;
-  top: 25vh;
-  left: 30%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: white;
-  padding: 20px 30px;
-  border-radius: 15px;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  max-width: 6000px;
-  width: 90%;       
-  box-sizing: border-box;
-}
 
-.Podskazka-text {
-  position: relative;
-  top: 40vh;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-  font-family: 'Arial', sans-serif;
+.Top-text,
+.Bot-text
+{
+  text-align: center;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
-  padding: 20px 30px;
-  border-radius: 15px;
-  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  max-width: 6000px;
-  width: 90%;       
-  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 90%;
+  margin: 1rem auto;
+}
+.Cena-text
+{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 1px;
+  max-width: 90%;
+  margin: 1rem auto;
 }
 
 .form-box {
-  position: static; 
-  margin-top: 105vh;
-  margin-left: 50px;
-  width: 35vh;
-  padding: 25px;
+  width: 90%;
+  max-width: 1000px;
   background-color: rgba(255,255,255,0.9);
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 3rem;
+  margin: 5rem auto 1rem auto;
 }
 
 .form-box label {
-  font-size: 35px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .form-box input,
 .form-box textarea {
-  padding: 10px;
-  font-size: 30px;
+  padding: 1rem;
+  font-size: 2rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   resize: vertical;
+  width: 100%;
 }
-.Bot-text {
-  position: relative;
-  top: 70vh;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
+
+.my-button_3 {
+  margin-top: 5rem;
   font-family: 'Arial', sans-serif;
+  font-size: 3rem;
   font-weight: bold;
+  background-color: #ff0404;
   color: white;
-  padding: 210px 0px;
-  border-radius: 15px;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  max-width: 6000px;
-  width: 90%;       
-  box-sizing: border-box;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
 }
+
 .Pysto-text {
-  position: absolute;
-  top: 1vh;
-  left: 1%;
-  transform: translateX(1%);
-  font-size: 1px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  color: white;
-  padding: 1800px 0px;
-  border-radius: 1px;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  max-width: 1px;
-  width: 90%;       
-  box-sizing: border-box;
+  display: none;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .Top-text,
+  .Cena-text,
+  .Podskazka-text,
+  .Bot-text {
+    font-size: 1.2rem;
+  }
+
+  .my-button,
+  .my-button_2,
+  .my-button_3 {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .toast {
+    font-size: 1.2rem;
+    min-width: 80%;
+  }
 }
