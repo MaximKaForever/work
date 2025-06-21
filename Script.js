@@ -7,3 +7,7 @@ button.addEventListener('click', () => {
     toast.classList.remove('show');
   }, 2500); 
 });
+
+document.querySelector('.my-button_2').addEventListener('click', function() {
+  window.location.href = 'oplata.html'; 
+});

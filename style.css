@@ -137,6 +137,24 @@
   width: 90%;       
   box-sizing: border-box;
 }
+.Cena-text {
+  position: relative;
+  top: 25vh;
+  left: 30%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  max-width: 6000px;
+  width: 90%;       
+  box-sizing: border-box;
+}
 
 .Podskazka-text {
   position: relative;
