@@ -1,5 +1,6 @@
 const button = document.querySelector('.my-button'); 
 const toast = document.getElementById('toast');
+const cameFromAnotherPage = document.referrer && !document.referrer.includes('index.html');
 
 if (button && toast) {
   button.addEventListener('click', () => {
@@ -25,17 +26,17 @@ if (button2) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const noticeBox = document.getElementById('pageNotice');
+  const messageBox = document.getElementById('pageNotice');
   const currentPath = window.location.pathname.toLowerCase();
+  const cameFromAnotherPage = document.referrer && !document.referrer.includes('index.html');
 
   console.log('currentPath:', currentPath);
 
-  if (currentPath.endsWith('/work/') || currentPath.endsWith('/work/index.html')) {
-    noticeBox.classList.add('show');
-
+  if ((currentPath.endsWith('index.html') || currentPath.endsWith('/')) && !cameFromAnotherPage) {
+    messageBox.classList.add('show');
     setTimeout(() => {
-      noticeBox.classList.remove('show');
-    }, 3000); 
+      messageBox.classList.remove('show');
+    }, 3000);
   }
 });
 
