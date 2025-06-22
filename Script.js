@@ -1,5 +1,6 @@
 const button = document.querySelector('.my-button'); 
 const toast = document.getElementById('toast');
+const cameFromAnotherPage = document.referrer && !document.referrer.includes('index.html');
 
 if (button && toast) {
   button.addEventListener('click', () => {
@@ -11,22 +12,9 @@ if (button && toast) {
 }
 
 const pngbutton = document.querySelector('.png-button');
-const pngToast = document.getElementById('pngToast');
-
 if (pngbutton) {
-  pngbutton.addEventListener('click', function () {
-    const currentPath = window.location.pathname.toLowerCase();
-
-    if (currentPath.endsWith('index.html') || currentPath.endsWith('/')) {
-      if (pngToast) {
-        pngToast.classList.add('show');
-        setTimeout(() => {
-          pngToast.classList.remove('show');
-        }, 2500);
-      }
-    } else {
-      window.location.href = 'index.html';
-    }
+  pngbutton.addEventListener('click', function() {
+    window.location.href = 'index.html'; 
   });
 }
 
@@ -36,6 +24,22 @@ if (button2) {
     window.location.href = 'oplata.html'; 
   });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const messageBox = document.getElementById('pageNotice');
+  const currentPath = window.location.pathname.toLowerCase();
+  const cameFromAnotherPage = document.referrer && !document.referrer.includes('index.html');
+
+  console.log('currentPath:', currentPath);
+
+  if ((currentPath.endsWith('index.html') || currentPath.endsWith('/')) && !cameFromAnotherPage) {
+    messageBox.classList.add('show');
+    setTimeout(() => {
+      messageBox.classList.remove('show');
+    }, 3000);
+  }
+});
+
 
 const clientForm = document.getElementById("clientForm");
 if (clientForm) {
