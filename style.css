@@ -215,7 +215,6 @@ html, body {
   margin: 1rem auto;
 }
 
-/* Адаптация под мобильные устройства */
 @media (max-width: 768px) {
   .Top-text,
   .Cena-text,
@@ -235,4 +234,25 @@ html, body {
     font-size: 1.2rem;
     min-width: 80%;
   }
+}
+
+.center-toast {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-size: 18px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.center-toast.show {
+  display: block;
+  opacity: 1;
 }

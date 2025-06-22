@@ -25,21 +25,17 @@ if (button2) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const messageBox = document.getElementById('pngBtnMessage');
+  const noticeBox = document.getElementById('pageNotice');
   const currentPath = window.location.pathname.toLowerCase();
 
-  console.log('DOMContentLoaded fired');
   console.log('currentPath:', currentPath);
 
-  if (
-    currentPath.endsWith('/work/') || 
-    currentPath.endsWith('/work/index.html')
-  ) {
-    messageBox.textContent = 'Вы находитесь на этой странице';
-    console.log('Message set');
-  } else {
-    messageBox.textContent = '';
-    console.log('Message cleared');
+  if (currentPath.endsWith('/work/') || currentPath.endsWith('/work/index.html')) {
+    noticeBox.classList.add('show');
+
+    setTimeout(() => {
+      noticeBox.classList.remove('show');
+    }, 3000); 
   }
 });
 
