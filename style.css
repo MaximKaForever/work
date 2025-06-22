@@ -40,14 +40,14 @@ html, body {
   transform: translateX(-50%);
   background-color: #333;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 1rem 2rem;
   border-radius: 20px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
   z-index: 1000;
-  min-width: 60%;
+  min-width: 80%;
   text-align: center;
 }
 
@@ -98,6 +98,18 @@ html, body {
   z-index: 10;
 }
 
+.png-button {
+  width: 90px;
+  height: 90px;
+  background-image: url('home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 0rem; 
+}
+
 .my-button_2 {
   font-size: 3rem;
   padding: 1rem 2.5rem;
@@ -110,18 +122,28 @@ html, body {
   transition: background-color 0.3s ease;
 }
 
-
-.Top-text,
+.Top-text
+{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 90%;
+  margin: 1rem auto;
+}
 .Bot-text
 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  color: white;
+  color: rgb(255, 255, 255);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   padding: 1rem;
   border-radius: 15px;
-  max-width: 90%;
+  max-width: 120%;
   margin: 1rem auto;
 }
 .Cena-text
@@ -180,8 +202,17 @@ html, body {
   align-self: center;
 }
 
-.Pysto-text {
-  display: none;
+.Instrykcia-text
+{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 1px;
+  max-width: 90%;
+  margin: 1rem auto;
 }
 
 /* Адаптация под мобильные устройства */

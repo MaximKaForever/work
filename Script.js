@@ -10,12 +10,39 @@ if (button && toast) {
   });
 }
 
+const pngbutton = document.querySelector('.png-button');
+if (pngbutton) {
+  pngbutton.addEventListener('click', function() {
+    window.location.href = 'index.html'; 
+  });
+}
+
 const button2 = document.querySelector('.my-button_2');
 if (button2) {
   button2.addEventListener('click', function() {
     window.location.href = 'oplata.html'; 
   });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  const messageBox = document.getElementById('pngBtnMessage');
+  const currentPath = window.location.pathname.toLowerCase();
+
+  console.log('DOMContentLoaded fired');
+  console.log('currentPath:', currentPath);
+
+  if (
+    currentPath.endsWith('/work/') || 
+    currentPath.endsWith('/work/index.html')
+  ) {
+    messageBox.textContent = 'Вы находитесь на этой странице';
+    console.log('Message set');
+  } else {
+    messageBox.textContent = '';
+    console.log('Message cleared');
+  }
+});
+
 
 const clientForm = document.getElementById("clientForm");
 if (clientForm) {

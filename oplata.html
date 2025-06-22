@@ -16,7 +16,7 @@
    <img class="Linia" src="https://avatars.mds.yandex.net/i?id=3ffbd8a4e47ce520ca8bd4d9e048c03601f35fc7-5155332-images-thumbs&n=13" alt="Фото">
   
   <div class="Bot-text">
-    Мы не просим данные вашей карты <br>После оплаты вам вышлют ключ в личные сообщения
+    Мы не просим данные вашей карты <br>После проверки платежа вам вышлют ключ в личные сообщения <br> В профиле можно будет посмотреть все свои ключи
   </div>
 
 <div class="form-box">
@@ -24,15 +24,18 @@
     <label for="card">С какой карты оплатили, например "Сбербанк":</label>
     <input type="text" id="card" name="карта_оплаты" required>
 
-    <label for="info">Данные клиента: (почта/телеграм)</label>
+    <label for="info">Ваша почта/телеграм</label>
     <textarea id="info" name="данные_клиента" rows="4" required></textarea>
     <button type="submit" class="my-button_3">Оплатил</button>
   </form>
 </div>
 
-  <div class="footer">
-    <div><button class="my-button">Профиль</button></div>
-  </div>
+<div class="footer">
+  <button class="my-button">Профиль</button>
+  <button class="png-button" id="pngBtn"></button>
+</div>
+
+<div id="pngBtnMessage" class="Instrykcia-text"></div>
 
 <div id="toast" class="toast">Кнопка находится в разработке</div>
 
